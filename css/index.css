@@ -1,0 +1,82 @@
+/* 
+ * Index (Home Page) CSS 
+ */
+
+ /* Main */
+.main-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.hover-text {
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+}
+
+.hover-text2 {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 54%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+}
+
+.signup-div {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+#signup-text {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 0 5px 0;
+    background-color: transparent;
+}
+
+#button-div {
+    text-align: center;
+    padding: 0 0 20px 0;
+    background-color: transparent;
+}
+
+#signup-btn {
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+}
+
+#signup-btn:hover {
+    background-color: #008CBA;
+    color: black;
+}
+
+/* Footer */
+
+#footer-line {
+    background-color: black;
+    height: 1px;
+    margin: 0 50px 0 50px;
+}
+
+
+

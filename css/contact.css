@@ -1,0 +1,61 @@
+/* 
+ * Index (Home Page) CSS 
+ */
+
+ /* Main */
+#form-container {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.form-between-div {
+    background-color: black;
+    height: 1px;
+    margin: 10px 650px 10px 650px;
+}
+
+.contact-form {
+    display: grid;
+    width: 50%;
+}
+
+.contact-form input {
+    height: 40px;
+    border: 1px solid black;
+    padding: 0 0 0 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.contact-form textarea {
+    height: 100px;
+    border: 1px solid black;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.contact-form input[type=submit] {
+    border: none;
+    margin: 10px 150px 40px 150px;
+    background-color: lightskyblue;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: rgb(95, 191, 251);
+    cursor: pointer;
+    color: white;
+}
+
+/* Footer */
+
+#footer-line {
+    background-color: black;
+    height: 1px;
+    margin: 0 50px 0 50px;
+}

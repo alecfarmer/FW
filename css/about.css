@@ -1,0 +1,63 @@
+/* 
+ * Index (Home Page) CSS 
+ */
+
+ /* Header */
+#header-line {
+    background-color: black;
+    height: 1px;
+    margin: 0 50px 0 50px;
+}
+
+/* Main */
+h1 {
+    padding: 90px 0 50px 0;
+    font-size: 40px;
+    font-weight: 200;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    line-height: 30px;
+    margin: 0 20% 0 20%;
+    padding: 0 0 90px 0;
+}
+
+.table-div {
+   margin: 0 auto 0 33.5%;
+   padding: 0 0 60px 0;
+}
+
+.table-div table {
+    width: 50%;
+}
+
+.table-div table caption {
+    font-size: 20px;
+    font-weight: 200px;
+}
+
+.table-div table td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 4px;
+}
+
+.video-div {
+    text-align: center;
+}
+
+.video-div iframe {
+    border: none;
+    border-radius: 15px;
+    margin: 0 0 20px 0;
+}
+
+/* Footer */
+
+#footer-line {
+    background-color: black;
+    height: 1px;
+    margin: 0 50px 0 50px;
+}
