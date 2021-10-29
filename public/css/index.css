@@ -3,12 +3,13 @@
  */
 
  /* Main */
+/*
 .main-image {
     width: 100%;
     height: auto;
     position: relative;
 }
-
+*/
 .hover-text {
     font-size: 35px;
     color: white;
@@ -77,6 +78,3 @@
     height: 1px;
     margin: 0 50px 0 50px;
 }
-
-
-

@@ -3,12 +3,13 @@
  */
 
  /* Header */
+/* Moved to inline css
 #header-line {
     background-color: black;
     height: 1px;
     margin: 0 50px 0 50px;
 }
-
+*/
 /* Main */
 h1 {
     padding: 90px 0 50px 0;
@@ -16,14 +17,15 @@ h1 {
     font-weight: 200;
     text-align: center;
 }
-
+/* Changed to inline css
 p {
     text-align: center;
     line-height: 30px;
     margin: 0 20% 0 20%;
     padding: 0 0 90px 0;
 }
-
+*/
+/* Changed to embeded css
 .table-div {
    margin: 0 auto 0 33.5%;
    padding: 0 0 60px 0;
@@ -43,7 +45,7 @@ p {
     text-align: center;
     padding: 4px;
 }
-
+*/
 .video-div {
     text-align: center;
 }

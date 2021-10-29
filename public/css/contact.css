@@ -3,7 +3,7 @@
  */
 
  /* Main */
-#form-container {
+ #form-container {
     display: flex;
     justify-content: center;
 }
@@ -12,7 +12,7 @@ h2 {
     padding: 30px 0 0 0;
     text-align: center;
 }
-
+/* Changed to embeded css
 .form-between-div {
     background-color: black;
     height: 1px;
@@ -51,10 +51,10 @@ h2 {
     cursor: pointer;
     color: white;
 }
-
+*/
 /* Footer */
 
-#footer-line {
+#footer-line #header-line {
     background-color: black;
     height: 1px;
     margin: 0 50px 0 50px;
