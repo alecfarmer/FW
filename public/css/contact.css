@@ -3,9 +3,10 @@
  */
 
  /* Main */
- #form-container {
+#form-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 95px;
 }
 
 h2 {
@@ -54,7 +55,7 @@ h2 {
 */
 /* Footer */
 
-#footer-line #header-line {
+#footer-line, #header-line {
     background-color: black;
     height: 1px;
     margin: 0 50px 0 50px;

@@ -1,0 +1,83 @@
+/* 
+ * Choose CSS 
+ */
+
+.cards-div {
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    padding-bottom: 95px;
+}
+
+.cards {
+    padding: 220px 0px;
+    border-radius: 10px;
+    max-width: 37ch;
+    min-width: 290px;
+    position: relative;
+}
+
+#player-card {
+    background-image: url(/images/glove.jpg);
+}
+
+#coach-card {
+    background-image: url(/images/coach.jpg);
+    background-size: cover;
+}
+
+.cards:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    color: white;
+    padding: 8px;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+    position: absolute;
+    bottom: 0;
+    width: 94%;
+    height: 145px;
+    border-radius: 10px;
+}
+
+.card-title, .card-desc, .button-div, .button {
+    background: transparent;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-desc {
+    padding-bottom: 8px;
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: lightblue;
+    padding: 5px 30px;
+    border-radius: 2px;
+}
+
+.button:hover, .button:focus {
+    background-color: #008CBA;
+}
+
+#footer-line {
+    background-color: black;
+    height: 1px;
+    margin: 20px 50px 0 50px;
+}

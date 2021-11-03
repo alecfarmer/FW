@@ -1,0 +1,277 @@
+/* 
+ * Player Page CSS
+ */
+ 
+/* Start Page Format */
+body {
+    font-family: "Karla", sans-serif;
+}
+
+#all-content {
+    margin: 2% 10% 0 10%;
+    border: 4px solid transparent;
+    border-radius: 5px;
+    height: 100%;
+}
+/* End Page Format */
+
+/* Start Main Title */
+.main-title {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid #4A545C;
+}
+
+.main-title h1 {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 35px;
+    color: black;
+}
+
+.main-title button {
+    margin-right: 15px;
+}
+
+.add-button {
+    background-color: #ADD8E6;
+    border: 1px solid #ADD8E6;
+    color: black;
+    text-align: center;
+    width: 20%;
+    padding: 8px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+  
+.add-button:hover {
+    background-color: #008CBA;
+}
+/* End Main Title */
+
+/* Start Pop Out Format */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #525C64;
+    width: 40%;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    margin-bottom: 5px;
+}
+
+/* End Pop Out Format */
+
+/* Start Add Form */
+.add-form ul {
+    padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.add-form ul li  .field-style {
+    box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	padding: 8px;
+	outline: none;
+    border: 1px solid #B0CFE0;
+    border-radius: 10px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+
+.add-form ul li .field-style:focus {
+    box-shadow: 0 0 5px #B0CFE0;
+	border:1px solid #B0CFE0;
+}
+
+.add-form ul li .field-split {
+    width: 49%;
+}
+
+.add-form ul li .field-full {
+    width: 100%;
+}
+
+.add-form ul li {
+    display: block;
+	margin-bottom: 10px;
+    min-height: 35px;
+}
+
+.add-form ul li button {
+    text-align: center;
+    margin: 0px 32%;
+}
+
+.add-form {
+    max-width: 450px;
+    padding: 30px;
+	margin: 50px auto;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+	border-radius: 10px;
+	border: 6px solid #3e83ab;
+    color: black;
+}
+
+.add-form button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 8px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 2px;
+    transition: 0.3s;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 35%;
+}
+
+.add-form button:hover {
+    background-color: #686868;
+    color: black;
+}
+
+/* Start players */
+.list-out {
+    margin: 4px;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+#player-list {
+    padding-left: 4px;
+    max-height: 425px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    overflow: auto;
+}
+
+.player {
+    background-color: lightgrey;
+    width: 30.5%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.player:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.infoSection, .playertexth2, .playertexth4, .playertextp {
+    background: transparent;
+}
+
+.playertexth2 {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: large;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.playertextp {
+    margin-top: 1px;
+    text-align: center;
+    color: black;
+}
+/* End Players */
+
+/* Start Notify Bar */
+.success {
+    background:#03a679;
+    color:#03a679;
+}
+  
+.failure {
+    background:#ff3939;
+    color:#ff3939;  
+}
+
+.notify {
+    position: absolute;
+    top: 0%;
+    width: 78.6%;
+    margin: 0%;
+    border-radius: 10px;
+    text-align: center;
+    background: black;
+    overflow: hidden;
+    transition: height .2s;
+}
+  
+#notifyType:before{
+    display: block;
+    margin-top: 15px;
+}
+  
+.active {  
+    height: 50px;
+}
+  
+.success:before {
+    Content:"Success! Player added!";
+}
+  
+.failure:before {
+    Content:"Oh no! Something went wrong! Try again.";
+}
+/* End Notify Bar */
+
+/* Start Misc */
+.hidden {
+    display:none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin-edit {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#footer-line {
+    background-color: black;
+    height: 1px;
+    margin: 0 50px 0 50px;
+}
+/* End Misc */
