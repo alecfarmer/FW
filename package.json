@@ -2,7 +2,7 @@
   "name": "fw",
   "version": "1.0.0",
   "description": "Final website for ITEC362",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
