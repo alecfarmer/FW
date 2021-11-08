@@ -119,7 +119,7 @@ async function updatePlayer(res, id, name, age, position, batThrow, commitment, 
 /*
  * COACH DATABASE
  */
-
+/*
 const coachSchema = new mongoose.Schema ({
     name:String,
     org:String,
@@ -185,7 +185,7 @@ async function updateCoach(res, id, name, org, team) {
 
     res.send(result);
 }
-
+*/
 app.listen(process.env.PORT || 3000, ()=>{
     console.log("Listening on port 3000");
 })
