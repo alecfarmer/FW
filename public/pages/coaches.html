@@ -1,0 +1,79 @@
+<!-- Developed by James Farmer -->
+<!-- ITEC362 - Final Website -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BaseShowcase - Coaches</title>
+    </head>
+    <header>
+        <nav>
+            <img src="/images/bblogo.png" alt="BaseShowcase Logo">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <button>Join our Newsletter</button>
+        </nav>
+    </header>
+    <body>
+        <div id="all-content">
+            <div id="note" class="notify"><span id="notifyType" class=""></span></div>
+            <div class="main-title">
+                <h1>Coach List</h1>
+                <button id="btn-add-pop" class="add-button">Add Coach</button>
+            </div>
+            <!-- START ADDING POP OUT -->
+            <div id="adding-pop" class="modal">`
+                <div class="modal-content add-player add-form">
+                    <span class="close"></span>
+                    <h2 class="center">Add Coach</h2>
+                    <ul>
+                        <li>
+                            <input id="txt-add-name" placeholder="Name" class="field-style field-split align-left">
+                            <input id="txt-add-age" placeholder="Age" class="field-style field-split align-left">
+                        </li>
+                        <li>
+                            <input id="txt-add-position" placeholder="Position" class="field-style field-split align-left">
+                            <input id="txt-add-bt" placeholder="Bat / Throw" class="field-style field-split align-left">
+                        </li>
+                        <li>
+                            <input id="txt-add-commit" placeholder="Commitment" class="field-style field-split align-left">
+                            <input id="txt-add-gradyear" placeholder="Graduation Year" class="field-style field-split align-left">
+                        </li>
+                        <li>
+                            <input id="txt-add-natrank" placeholder="National Ranking" class="field-style field-split align-left">
+                            <input id="txt-add-staterank" placeholder="State Ranking" class="field-style field-split align-left">
+                        </li>
+                        <li>
+                            <input id="txt-add-gpa" placeholder="Player GPA" class="field-style field-full align-left">
+                        </li>
+                        <li>
+                            <button id="btn-add-player">Add Coach</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END ADDING POP OUT -->
+            <!-- START PLAYER LIST-->
+            <div class="list-out">
+                <div id="coach-list"></div>
+            </div>
+            <!-- END PLAYER LIST-->
+            </div>
+        </div>
+        <div id="footer-line"></div>
+    </body>
+    <footer>
+        <div id="footer-text">Copyright © 2021 - James Farmer</div>
+        <!-- All socials will eventually link to official accounts -->
+        <div>
+            <a href="https://www.twitter.com/"><img class="footer-socials" alt="Twitter" src="/images/twitter.png"></a>
+            <a href="https://www.instagram.com"><img class="footer-socials" alt="Instagram" src="/images/instagram.png"></a>
+            <a href="https://www.facebook.com"><img class="footer-socials" alt="Facebook" src="/images/facebook.png"></a>
+        </div>
+    </footer>
+</html>

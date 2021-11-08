@@ -2,7 +2,7 @@
   "name": "fw",
   "version": "1.0.0",
   "description": "Final website for ITEC362",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,5 +25,8 @@
     "mongoose": "^6.0.12",
     "passport": "^0.5.0",
     "passport-google-oauth": "^2.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
   }
 }

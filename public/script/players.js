@@ -22,48 +22,8 @@ window.onload = function() {
         }
     }
     // END ADD POP OUT
-
-
-    // START EDIT BUTTON POP OUT
-    let editExeBtn = document.getElementById("edit-pop");
-    /// --> Button found in js creation below \\\
-    let btnEdit = document.getElementById("btn-edit-player");
-    // EDIT PLAYER / CLOSE POP OUT
-    btnEdit.onclick = function() {
-        editPlayer();
-        setTimeout(() => { editExeBtn.style.display = "none"; }, 800);
-    }
-    // CLOSE POP OUT
-    window.onclick = function(event) {
-        if(event.target == editExeBtn) {
-            editExeBtn.style.display = "none";
-        }
-    }
-    // END EDIT POP OUT
-
-
-    // START DELETE POP OUT
-    let deleteExeBtn = document.getElementById("delete-pop");
-    /// --> Button found in js creation below \\\
-    let btnDelete = document.getElementById("btn-delete-player");
-    let btnNevermind = document.getElementById("btn-exit");
-    btnDelete.onclick = function() {
-        deletePlayer();
-        setTimeout(() => { deleteExeBtn.style.display = "none"; }, 800);
-    }
-    // NEVERMIND CLOSE
-    btnNevermind.onclick = function() {
-        deleteExeBtn.style.display = "none";
-    }
-    // CLOSE POP OUT
-    window.onclick = function(event) {
-        if(event.target == deleteExeBtn) {
-            deleteExeBtn.style.display = "none";
-        }
-    }
-    // END DELETE POP OUT
-
 }
+
 async function displayPlayers() {
     let response = await fetch('.././api/players/');
     let playersJSON = await response.json();

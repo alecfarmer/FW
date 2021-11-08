@@ -1,4 +1,5 @@
 // James Alec Farmer
+require('dotenv/config')
 const express = require("express");
 const app = express();
 const Joi = require("joi");
@@ -7,11 +8,15 @@ app.use(express.json());
 const mongoose = require("mongoose");
 
 // CONNECT TO DATABASE
-mongoose.connect("mongodb+srv://jarvis_admin:r8Du9Df2J3Pw63XP@jarvis.svqkj.mongodb.net/fwProject?retryWrites=true&w=majority", {useUnifiedTopology:true, useNewUrlParser:true})
+mongoose.connect(process.env.DATABASE_LINK,
+    {useUnifiedTopology:true, useNewUrlParser:true})
     .then(()=>console.log("Successfully connected to mongo database!"))
     .catch(err => console.error("Couldn't connect to mongo database!", err));
 
-// DATABASE LAYOUT
+/*
+ * PLAYER DATABASE
+ */
+
 const playerSchema = new mongoose.Schema ({
     name:String,
     age:Number,
@@ -30,7 +35,6 @@ const Player = mongoose.model('Player', playerSchema);
 
 app.get('/', (req, res) => {
     res.sendFile( __dirname + "/public/pages" + "players.html" );
-    console.log("found")``
 });
 
 app.get('/api/players', (req, res)=>{
@@ -112,13 +116,74 @@ async function updatePlayer(res, id, name, age, position, batThrow, commitment, 
     res.send(result);
 }
 
-app.delete('/api/players/:id', (req, res)=>{
-    removePlayer(res, req.params.id);
+/*
+ * COACH DATABASE
+ */
+
+const coachSchema = new mongoose.Schema ({
+    name:String,
+    org:String,
+    Team:String
 });
 
-async function removePlayer(res, id) {
-    const player = await Player.findByIdAndRemove(id);
-    res.send(player);
+const Coach = mongoose.model('Coach', coachSchema);
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/public/pages" + "coaches.html");
+});
+
+app.get('/api/coaches', (req, res) => {
+    getCoaches(res);
+});
+
+async function getCoaches(res) {
+    const coaches = await Coach.find();
+    console.log(coaches);
+    res.send(coaches);
+}
+
+app.post('/api/coaches', (req, res) => {
+    const result = req.body;
+
+    if(result.error) {
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    const coach = new Coach({
+
+    });
+
+    createCoach(coach, res);
+});
+
+async function createCoach(coach, res) {
+    const result = await coach.save();
+    console.log(result);
+    res.send(coach);
+}
+
+app.put('/api/coachs/:id', (req, res)=>{
+    const result = validateCoach(req.body);
+
+    if(result.error) {
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    updateCoach(res, req.params.id, req.body.name, reg.body.org, reg.body.team);
+});
+
+async function updateCoach(res, id, name, org, team) {
+    const result = await Coach.updateOne({_id:id}, {
+        $set:{
+            name:name,
+            org:org,
+            team:team
+        }
+    })
+
+    res.send(result);
 }
 
 app.listen(process.env.PORT || 3000, ()=>{
