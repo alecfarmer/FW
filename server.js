@@ -1,5 +1,4 @@
 // James Alec Farmer
-require('dotenv/config')
 const express = require("express");
 const { string } = require('joi');
 const app = express();
