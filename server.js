@@ -9,7 +9,7 @@ app.use(express.json());
 const mongoose = require("mongoose");
 
 // CONNECT TO DATABASE
-mongoose.connect(process.env.DATABASE_LINK,
+mongoose.connect("pmongodb+srv://jarvis_admin:r8Du9Df2J3Pw63XP@jarvis.svqkj.mongodb.net/fwProject?retryWrites=true&w=majority",
     {useUnifiedTopology:true, useNewUrlParser:true})
     .then(()=>console.log("Successfully connected to mongo database!"))
     .catch(err => console.error("Couldn't connect to mongo database!", err));
