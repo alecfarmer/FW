@@ -3,7 +3,6 @@
  */
 
  /* Main */
-
 .main-image {
     width: 100%;
     height: auto;
@@ -38,10 +37,19 @@
     background-color: transparent;
 }
 
-#signup-text {
+.signup-text {
     color: white;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
+    padding: 0 0 5px 0;
+    background-color: transparent;
+}
+
+#add-text {
+    color: white;
+    font-size: 15px;
+    font-style: italic;
     text-align: center;
     padding: 0 0 5px 0;
     background-color: transparent;

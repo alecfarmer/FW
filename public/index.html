@@ -9,14 +9,12 @@
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-HRK7JQ3Y2H');
         </script>
         <meta name="description" content="A baseball recruiting website for coaches and players.">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="script-src 'none'">
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/global.css">
         <title>BaseShowcase - Home</title>
@@ -27,6 +25,13 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/about.html">About</a></li>
+                <div class="dropdown">
+                    <li class="dropbtn">Lists</li>
+                    <div class="dropdown-content">
+                        <a href="pages/players.html">Players</a>
+                        <a href="pages/coaches.html">Coaches</a>
+                    </div>
+                </div>
                 <li><a href="pages/contact.html">Contact Us</a></li>
             </ul>
             <button>Join our Newsletter</button>
@@ -37,8 +42,8 @@
         <p class="hover-text">Become The Best</p>
         <p class="hover-text2">by putting your skills on show</p>
         <div class="signup-div">
-            <p class="" id="signup-text">Start showcasing your talent</p>
-            <!-- Will eventually link to signup page -->
+            <p class="signup-text">Start showcasing your talent</p>
+            <p id="add-text">Providing a recruiting platform for both coaches and players since 2021.</p>
             <div id="button-div"><a href="pages/choose.html"><button type="button" id="signup-btn">Get Started</button></a></div>
         </div>
         <div id="footer-line"></div>

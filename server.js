@@ -1,6 +1,7 @@
 // James Alec Farmer
-//require('dotenv/config')
+require('dotenv/config')
 const express = require("express");
+const { string } = require('joi');
 const app = express();
 const Joi = require("joi");
 app.use(express.static("public"));
@@ -17,6 +18,7 @@ mongoose.connect(process.env.DATABASE_LINK,
  * PLAYER DATABASE
  */
 
+// Defining new schema
 const playerSchema = new mongoose.Schema ({
     name:String,
     age:Number,
@@ -29,14 +31,15 @@ const playerSchema = new mongoose.Schema ({
     gpa:Number
 });
 
-console.log(__dirname + "/public/pages/players");
-
+// Generating new schema
 const Player = mongoose.model('Player', playerSchema);
 
+// Getting the page where date requested is to be sent
 app.get('/', (req, res) => {
     res.sendFile( __dirname + "/public/pages" + "players.html" );
 });
 
+// Getting players form database
 app.get('/api/players', (req, res)=>{
     getPlayers(res);
 });
@@ -47,6 +50,7 @@ async function getPlayers(res) {
     res.send(players);
 }
 
+// Getting player from specifc id
 app.get('/api/players/:id', (req,res)=>{
     getPlayer(req.params.id, res);
 });
@@ -57,6 +61,7 @@ async function getPlayer(id, res) {
     res.send(player);
 }
 
+// Posting or adding new players when created
 app.post('/api/players', (req, res)=>{
     const result = req.body;
 
@@ -86,44 +91,18 @@ async function createPlayer(player, res) {
     res.send(player);
 }
 
-app.put('/api/players/:id', (req, res)=>{
-    const result = validatePlayer(req.body);
-
-    if(result.error) {
-        res.status(400).send(result.error.details[0].message);
-        return;
-    }
-
-    updatePlayer(res, req.params.id, req.body.name, req.body.age, req.body.position, req.body.batThrow, req.body.commitment,
-        req.body.gradYear, req.body.nationRanking, req.body.stateRanking, req.body.gpa);
-});
-
-async function updatePlayer(res, id, name, age, position, batThrow, commitment, gradYear, nationRanking, stateRanking, gpa) {
-    const result = await Player.updateOne({_id:id}, {
-        $set:{
-            name:name,
-            age:age,
-            position:position,
-            batThrow:batThrow,
-            commitment:commitment,
-            gradYear:gradYear,
-            nationRanking:nationRanking,
-            stateRanking:stateRanking,
-            gpa:gpa
-        }
-    })
-
-    res.send(result);
-}
-
 /*
  * COACH DATABASE
  */
-/*
+
 const coachSchema = new mongoose.Schema ({
     name:String,
-    org:String,
-    Team:String
+    tag:String,
+    position:String,
+    class:String,
+    college:String,
+    phone:String,
+    email:String
 });
 
 const Coach = mongoose.model('Coach', coachSchema);
@@ -138,8 +117,18 @@ app.get('/api/coaches', (req, res) => {
 
 async function getCoaches(res) {
     const coaches = await Coach.find();
-    console.log(coaches);
+    console.log(coaches)
     res.send(coaches);
+}
+
+app.get('/api/coaches/:id', (req, res) => {
+    getCoache(req.params.id, res);
+});
+
+async function getCoach(id, res) {
+    const coach = await Coach.findOne({_id:id});
+    console.log(coach);
+    res.send(coach)
 }
 
 app.post('/api/coaches', (req, res) => {
@@ -150,8 +139,14 @@ app.post('/api/coaches', (req, res) => {
         return;
     }
 
-    const coach = new Coach({
-
+    const coach = new Coach ({
+        name:req.body.name,
+        tag:req.body.tag,
+        position:req.body.position,
+        class:req.body.class,
+        college:req.body.college,
+        phone:req.body.phone,
+        email:req.body.email
     });
 
     createCoach(coach, res);
@@ -159,33 +154,10 @@ app.post('/api/coaches', (req, res) => {
 
 async function createCoach(coach, res) {
     const result = await coach.save();
-    console.log(result);
+    console.log(result)
     res.send(coach);
 }
 
-app.put('/api/coachs/:id', (req, res)=>{
-    const result = validateCoach(req.body);
-
-    if(result.error) {
-        res.status(400).send(result.error.details[0].message);
-        return;
-    }
-
-    updateCoach(res, req.params.id, req.body.name, reg.body.org, reg.body.team);
-});
-
-async function updateCoach(res, id, name, org, team) {
-    const result = await Coach.updateOne({_id:id}, {
-        $set:{
-            name:name,
-            org:org,
-            team:team
-        }
-    })
-
-    res.send(result);
-}
-*/
 app.listen(process.env.PORT || 3000, ()=>{
     console.log("Listening on port 3000");
 })

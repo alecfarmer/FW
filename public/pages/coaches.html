@@ -3,18 +3,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="description" content="A baseball recruiting website for coaches and players.">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BaseShowcase - Coaches</title>
+        <script src="../script/coaches.js"></script>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/players.css">
+        <title>BaseShowcase - Players</title>
     </head>
     <header>
         <nav>
             <img src="/images/bblogo.png" alt="BaseShowcase Logo">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <div class="dropdown">
+                    <li class="dropbtn">Lists</li>
+                    <div class="dropdown-content">
+                        <a href="/pages/players.html">Players</a>
+                        <a href="/pages/coaches.html">Coaches</a>
+                    </div>
+                </div>
+                <li><a href="/pages/contact.html">Contact Us</a></li>
             </ul>
             <button>Join our Newsletter</button>
         </nav>
@@ -34,22 +45,18 @@
                     <ul>
                         <li>
                             <input id="txt-add-name" placeholder="Name" class="field-style field-split align-left">
-                            <input id="txt-add-age" placeholder="Age" class="field-style field-split align-left">
+                            <input id="txt-add-tag" placeholder="College, Pro, or Scout" class="field-style field-split align-left">
                         </li>
                         <li>
-                            <input id="txt-add-position" placeholder="Position" class="field-style field-split align-left">
-                            <input id="txt-add-bt" placeholder="Bat / Throw" class="field-style field-split align-left">
+                            <input id="txt-add-position" placeholder="Position Held" class="field-style field-split align-left">
+                            <input id="txt-add-class" placeholder="D1, D2, D3, Juco, NAIA" class="field-style field-split align-left">
                         </li>
                         <li>
-                            <input id="txt-add-commit" placeholder="Commitment" class="field-style field-split align-left">
-                            <input id="txt-add-gradyear" placeholder="Graduation Year" class="field-style field-split align-left">
+                            <input id="txt-add-college" placeholder="College" class="field-style field-split align-left">
+                            <input id="txt-add-phone" placeholder="Phone Number" class="field-style field-split align-left">
                         </li>
                         <li>
-                            <input id="txt-add-natrank" placeholder="National Ranking" class="field-style field-split align-left">
-                            <input id="txt-add-staterank" placeholder="State Ranking" class="field-style field-split align-left">
-                        </li>
-                        <li>
-                            <input id="txt-add-gpa" placeholder="Player GPA" class="field-style field-full align-left">
+                            <input id="txt-add-email" placeholder="Email" class="field-style field-full align-left">
                         </li>
                         <li>
                             <button id="btn-add-player">Add Coach</button>
@@ -60,7 +67,7 @@
             <!-- END ADDING POP OUT -->
             <!-- START PLAYER LIST-->
             <div class="list-out">
-                <div id="coach-list"></div>
+                <div id="player-list"></div>
             </div>
             <!-- END PLAYER LIST-->
             </div>

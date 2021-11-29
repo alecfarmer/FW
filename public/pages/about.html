@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="description" content="A baseball recruiting website for coaches and players.">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,14 +30,25 @@
                 text-align: center;
                 padding: 4px;
             }
+
+            .alt-background {
+                background-color: #b5b5b5;
+            }
         </style>
     </head>
     <header>
         <nav>
-            <img src="/images/bblogo.png" alt="Logo">
+            <img src="/images/bblogo.png" alt="BaseShowcase Logo">
             <ul>
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about.html">About</a></li>
+                <div class="dropdown">
+                    <li class="dropbtn">Lists</li>
+                    <div class="dropdown-content">
+                        <a href="/pages/players.html">Players</a>
+                        <a href="/pages/coaches.html">Coaches</a>
+                    </div>
+                </div>
                 <li><a href="/pages/contact.html">Contact Us</a></li>
             </ul>
             <button>Join our Newsletter</button>
@@ -45,7 +57,7 @@
     <main>
         <div style="background-color: black; height: 1px; margin: 0 50px 0 50px;"></div>
         <h1><strong>About</strong></h1>
-        <p style="text-align: center; line-height: 30px; margin: 0 20% 0 20%; padding: 0 0 90px 0;">
+        <p style="text-align: center; line-height: 30px; margin: 0 20% 0 20%; padding: 0 0 50px 0;">
             BaseShowcase was created to help players and coaches get a head start on the recruiting process. 
             Since recruiting is difficult to do one your own, we try to help by providing an intuitive and simple 
             way to get yourself out there. We strive to get every registered player a chance at playing at the next 
@@ -62,9 +74,9 @@
                     <th id="yOfExp" rowspan="1">Years of Experience</th>
                 </tr>
                 <tr>
-                    <td>Little League</td>
-                    <td>1-7</td>
-                    <td>none</td>
+                    <td class="alt-background">Little League</td>
+                    <td class="alt-background">1-7</td>
+                    <td class="alt-background">none</td>
                 </tr>
                 <tr>
                     <td>Showcase</td>
@@ -72,21 +84,40 @@
                     <td>8-9</td>
                 </tr>
                 <tr>
-                    <td>College</td>
-                    <td>18-22</td>
-                    <td>9-14</td>
+                    <td class="alt-background">College</td>
+                    <td class="alt-background">18-22</td>
+                    <td class="alt-background">9-14</td>
                 </tr>
                 <tr>
                     <td>Professional</td>
-                    <td>18-40</td>
-                    <td>10-40</td>
+                    <td>18-40+</td>
+                    <td>10-40+</td>
                 </tr>
             </table>
         </div>
-        <div class="video-div">
-            <h3>MLB player Javy Baez & Kris Bryant Fielding Practice</h3>
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/Csl-Unc960M?controls=0" title="Fielding"></iframe>
+        <p style="text-align: center; line-height: 30px; margin: 0 20% 0 20%; padding: 0 0 60px 0;">
+            There are many levels of play during a players career. We tend to focus on the earlier and middle years 
+            of play as that is when the player is developing their skills. Starting at middle school age, some players
+            possess the skills to play at a higher level and want to showcase their abilities to next level recruits.
+            The graphic above shows the different levels of play throughout the live of a players career.    
+        </p>
+        <h2 style="text-align: center; padding: 0 0 20px 0;">Recruiting</h2>
+        <p style="text-align: center; line-height: 30px; margin: 0 20% 0 20%; padding: 0 0 50px 0;">
+            Getting recruited can be a stressful task. We understand that and we strive to make it easier for parents, players, 
+            and coaches. Included below are some informational videos that will help educated you on how the process works 
+            and how to master getting recruited.
+        </p>
+        <div style="display: flex; justify-content: center;">
+            <div class="video-div" style="margin-right: 30px;">
+                <h3>Recruiting through Showcase Baseball</h3>
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/-HM6SK0vZqM?controls=0" title="Fielding"></iframe>
+            </div>
+            <div class="video-div">
+                <h3>College Recruiting</h3>
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/Rrpz3GAMYnA?controls=0" title="Fielding"></iframe>
+            </div>
         </div>
         <div id="footer-line"></div>
     </main>
