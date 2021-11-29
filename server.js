@@ -1,4 +1,4 @@
-// James Alec Farmer
+// Written by James Farmer
 const express = require("express");
 const { string } = require('joi');
 const app = express();
